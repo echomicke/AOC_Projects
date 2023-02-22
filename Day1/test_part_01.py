@@ -12,3 +12,6 @@ class TestStringMethods(unittest.TestCase):
         result = pt1.Fuel_required(mass)
 
         self.assertEqual(expected_result, result)
+
+if __name__ == '__main__':
+    unittest.main()

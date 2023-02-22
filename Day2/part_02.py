@@ -1,6 +1,7 @@
 def process_intcode(intcode):
     
     """Processes an intcode based on the opcode"""
+    intcode = intcode[:]
     for i in range(0, len(intcode), 4):
         if i + 3 >= len(intcode):
             break
@@ -36,3 +37,11 @@ def find_Noun_verb(intcode, targetOutputt):
             break
 
     return result
+
+if __name__ == '__main__':
+    with open("input") as file:
+        data = file.read()
+    intcode_data = data.split(',')
+    intcode_data = list(map(int, intcode_data))
+    results = find_Noun_verb(intcode_data, 19690720)
+    print(results)

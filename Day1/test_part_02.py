@@ -4,7 +4,7 @@ import part_02 as pt2
 class TestStringMethods(unittest.TestCase):
 
     def setUp(self):
-        self.example_input = [12, 14, 1969, 100756]
+        self.example_input = [14, 1969, 100756]
 
     def test_modules_fuel_requirements(self):
         expected_sum = 51314

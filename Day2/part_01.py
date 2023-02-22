@@ -24,3 +24,11 @@ def process_intcode(intcode):
             break
 
     return intcode
+
+if __name__ == '__main__':
+    with open("input") as file:
+        data = file.read()
+    intcode_data = data.split(',')
+    intcode_data = list(map(int, intcode_data))
+    results = process_intcode(pre_run(intcode_data))
+    print(results[0])
